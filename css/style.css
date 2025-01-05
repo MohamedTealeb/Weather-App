@@ -70,6 +70,8 @@ body{
     display: flex;
     align-items: center;
     text-align: left;
+    margin-bottom: 15px;
+    flex: 1;
 }
 .col img{
     width: 40px;
@@ -78,4 +80,76 @@ body{
 .humidity, .wind{
     font-size: 28px;
     margin-top: -6px;
+} 
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px 15px; /* Reduce padding */
+    }
+
+    .weather h1 {
+        font-size: 50px; /* Smaller font size for h1 */
+    }
+
+    .weather h2 {
+        font-size: 30px; /* Smaller font size for h2 */
+    }
+
+    .details {
+        flex-direction: column; /* Stack details vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .col {
+        margin-bottom: 15px; /* Add space between columns */
+        width: 100%; /* Ensure full width for each column */
+    }
+
+    .search input {
+        font-size: 16px; /* Smaller font size for input */
+    }
+
+    .search button {
+        width: 50px; /* Smaller button */
+        height: 50px; /* Smaller button */
+    }
+
+    .search img {
+        width: 18px; /* Smaller icon */
+    }
+    .col{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col img {
+        margin-right: 15px; /* Increase space between image and text */
+    }
+  
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin: 50px auto; /* Adjust margin for smaller screens */
+    }
+  
+    .weather h1 {
+        font-size: 40px; /* Further reduce font size for h1 */
+    }
+
+    .weather h2 {
+        font-size: 25px; /* Further reduce font size for h2 */
+    }
+
+    .humidity, .wind {
+        font-size: 24px; /* Smaller font size for humidity and wind */
+    }
+    .col{
+        display: flex;
+        justify-content: space-between;
+    }
+    .col img {
+        margin-right: 10px; /* Adjust margin for smaller screens */
+    }
 } 
